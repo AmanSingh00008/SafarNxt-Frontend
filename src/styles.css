@@ -1,0 +1,513 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Reset & Base ─────────────────────────────────────────────────── */
+* {
+    box-sizing: border-box;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+html.lenis.lenis-stopped,
+html.lenis.lenis-stopped body {
+    overflow: auto;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────── */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 162, 75, .45) rgba(245, 243, 238, .06);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(245, 243, 238, .04);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(201, 162, 75, .28);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background .25s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 162, 75, .55);
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* ── Global ───────────────────────────────────────────────────────── */
+::selection {
+    background: #C9A24B;
+    color: #0B0E11;
+}
+
+body {
+    margin: 0;
+    background: #0B0E11;
+    color: #F5F3EE;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.serif {
+    font-family: 'Fraunces', serif;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #C9A24B;
+}
+
+/* ── Grain overlay ───────────────────────────────────────────────── */
+.grain:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: .035;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+/* ── Route loader ─────────────────────────────────────────────────── */
+.route-loader {
+    height: 70vh;
+    display: grid;
+    place-content: center;
+    gap: 14px;
+    letter-spacing: .3em;
+    font-size: 11px;
+    color: #C9A24B;
+}
+
+.route-loader i {
+    display: block;
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(90deg, transparent, #C9A24B, transparent);
+    animation: load 1.5s infinite;
+}
+
+@keyframes load {
+    50% {
+        transform: scaleX(.35);
+        opacity: .3;
+    }
+}
+
+/* ── Image fade ───────────────────────────────────────────────────── */
+.image-fade {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-fade:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(11, 14, 17, .75), transparent 55%);
+    transition: opacity .5s ease;
+}
+
+.image-fade:hover:after {
+    opacity: .5;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PREMIUM HOVER SYSTEM
+══════════════════════════════════════════════════════════════════ */
+
+/* ── Nav links — sliding gold underline ─────────────────────────── */
+.nav-link {
+    position: relative;
+    color: #d0cec7;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    transition: color .3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #C9A24B;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .35s cubic-bezier(.76, 0, .24, 1);
+}
+
+.nav-link:hover {
+    color: #C9A24B;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ── Gold button — shimmer + lift ───────────────────────────────── */
+.gold-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #C9A24B;
+    color: #0B0E11;
+    text-decoration: none;
+    padding: 14px 22px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    transition: all .35s cubic-bezier(.34, 1.56, .64, 1);
+    z-index: 0;
+}
+
+.gold-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, .35) 50%, transparent 100%);
+    transition: left .5s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gold-button:hover {
+    background: #ddb96b;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(201, 162, 75, .35);
+}
+
+.gold-button:hover::before {
+    left: 140%;
+}
+
+.gold-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(201, 162, 75, .25);
+}
+
+/* ── Heading hover — gold underline wipe ────────────────────────── */
+/* Works on block-level headings without changing display */
+.hover-heading {
+    border-bottom: 1.5px solid transparent;
+    transition: border-color .4s cubic-bezier(.76, 0, .24, 1);
+    padding-bottom: 3px;
+}
+
+.hover-heading:hover {
+    border-color: #C9A24B;
+}
+
+/* ── Eyebrow label hover — letter spacing bloom ─────────────────── */
+/* inline-block is safe here since eyebrow labels are already inline/short */
+.eyebrow-hover {
+    display: inline-block;
+    transition: letter-spacing .25s ease, color .25s ease;
+    cursor: default;
+}
+
+.eyebrow-hover:hover {
+    letter-spacing: .32em;
+    color: #ddb96b;
+}
+
+/* ── Card lift — premium shadow + border glow ───────────────────── */
+.card-hover {
+    transition: transform .45s cubic-bezier(.34, 1.2, .64, 1),
+        box-shadow .45s ease,
+        border-color .3s ease;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45), 0 0 0 1px rgba(201, 162, 75, .25);
+    border-color: rgba(201, 162, 75, .25);
+}
+
+/* ── Image card — scale + reveal shimmer ────────────────────────── */
+.img-hover-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-hover-wrap img {
+    transition: transform .8s cubic-bezier(.25, .46, .45, .94),
+        filter .8s ease;
+    will-change: transform;
+}
+
+.img-hover-wrap:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.08);
+}
+
+.img-hover-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .08), transparent);
+    transition: left .7s ease;
+    pointer-events: none;
+}
+
+.img-hover-wrap:hover::after {
+    left: 160%;
+}
+
+/* ── Arrow icon bounce ──────────────────────────────────────────── */
+.arrow-hover {
+    transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), color .3s ease;
+}
+
+.arrow-hover:hover {
+    transform: translate(3px, -3px);
+    color: #C9A24B;
+}
+
+/* ── Social icon glow ───────────────────────────────────────────── */
+.social-hover {
+    transition: color .3s ease, transform .3s cubic-bezier(.34, 1.56, .64, 1),
+        filter .3s ease;
+}
+
+.social-hover:hover {
+    color: #C9A24B;
+    transform: translateY(-3px) scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(201, 162, 75, .6));
+}
+
+/* ── Footer link ─────────────────────────────────────────────────── */
+.footer-link {
+    transition: color .25s ease, letter-spacing .3s ease;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    color: #C9A24B;
+    letter-spacing: .04em;
+}
+
+/* ── Input / Textarea focus glow ────────────────────────────────── */
+.form-input-hover {
+    transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.form-input-hover:focus {
+    border-color: #C9A24B;
+    box-shadow: 0 2px 0 0 rgba(201, 162, 75, .35);
+}
+
+/* ── Section heading reveal on hover ────────────────────────────── */
+/* border-bottom approach: safe on block elements, no display change needed */
+.section-heading {
+    position: relative;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: border-color .45s cubic-bezier(.76, 0, .24, 1);
+}
+
+.section-heading:hover {
+    border-color: #C9A24B;
+}
+
+/* ── Filter / tag button ─────────────────────────────────────────── */
+.filter-btn {
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: rgba(255, 255, 255, .55);
+    padding: 8px 16px;
+    font-size: 10px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    transition: all .3s cubic-bezier(.34, 1.2, .64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(201, 162, 75, .08);
+    transform: translateY(100%);
+    transition: transform .3s ease;
+}
+
+.filter-btn:hover {
+    border-color: rgba(201, 162, 75, .5);
+    color: #C9A24B;
+    transform: translateY(-2px);
+}
+
+.filter-btn:hover::before {
+    transform: translateY(0);
+}
+
+.filter-btn.active {
+    border-color: #C9A24B;
+    background: #C9A24B;
+    color: #0B0E11;
+}
+
+/* ── Itinerary row expand ────────────────────────────────────────── */
+.itinerary-row {
+    transition: padding-left .3s ease, border-color .3s ease, background .3s ease;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding-top: 20px;
+    border-radius: 2px;
+}
+
+.itinerary-row:hover {
+    padding-left: 10px;
+    border-color: rgba(201, 162, 75, .4);
+    background: rgba(201, 162, 75, .04);
+}
+
+/* ── Value/feature card (About page) ────────────────────────────── */
+.value-card {
+    padding: 28px 24px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: border-color .35s ease, background .35s ease, transform .35s cubic-bezier(.34, 1.2, .64, 1);
+}
+
+.value-card:hover {
+    border-color: rgba(201, 162, 75, .3);
+    background: rgba(201, 162, 75, .05);
+    transform: translateY(-4px);
+}
+
+/* ── Logo shimmer ───────────────────────────────────────────────── */
+.logo-hover {
+    position: relative;
+    display: inline-block;
+    transition: letter-spacing .4s ease;
+}
+
+.logo-hover:hover {
+    letter-spacing: .08em;
+}
+
+/* ── "Back" / utility links ─────────────────────────────────────── */
+.util-link {
+    position: relative;
+    transition: color .25s ease, gap .3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.util-link:hover {
+    color: #C9A24B;
+    gap: 10px;
+}
+
+/* ── "Now in focus" hero card ────────────────────────────── */
+.focus-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        border-color .4s ease,
+        background .4s ease,
+        transform .45s cubic-bezier(.34, 1.2, .64, 1),
+        box-shadow .4s ease;
+}
+
+/* Gold shimmer sweep on hover */
+.focus-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(201, 162, 75, .18) 50%,
+            transparent 100%);
+    transition: left .6s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.focus-card:hover::before {
+    left: 130%;
+}
+
+.focus-card:hover {
+    border-color: rgba(201, 162, 75, .45) !important;
+    background: rgba(201, 162, 75, .08) !important;
+    transform: translateY(-6px);
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, .5),
+        0 0 0 1px rgba(201, 162, 75, .25),
+        0 0 30px rgba(201, 162, 75, .08);
+}
+
+/* Ensure children sit above the shimmer */
+.focus-card>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Shimmer text (hero tagline) ────────────────────────────────── */
+@keyframes shimmer-gold {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg, #C9A24B 0%, #f5d98e 40%, #C9A24B 60%, #b88c3a 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer-gold 3.5s linear infinite;
+}

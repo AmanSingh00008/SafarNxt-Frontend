@@ -1,0 +1,48 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"Travel Startup Idea","textShapes":2}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"Title 1","placeholder":"title","text":"Travel Startup Idea","textPreview":"Travel Startup Idea","textChars":19,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"name":"Content Placeholder 2","text":"Affordable, Safe & Memorable Tours for Students, Families & Senior Citizens","textPreview":"Affordable, Safe & Memorable Tours for Students, Families & Senior Citizens","textChars":75,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":""}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"Vision","textShapes":2}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"Title 1","placeholder":"title","text":"Vision","textPreview":"Vision","textChars":6,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"Content Placeholder 2","text":"Make travel accessible, safe and enjoyable for every age group.","textPreview":"Make travel accessible, safe and enjoyable for every age group.","textChars":63,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":""}
+{"kind":"slide","id":"sl/efagca","slide":3,"title":"Development Workflow","textShapes":2}
+{"kind":"textbox","id":"sh/kfm5kz2h","slide":3,"name":"Title 1","placeholder":"title","text":"Development Workflow","textPreview":"Development Workflow","textChars":20,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/lgvmd4j2","slide":3,"name":"Content Placeholder 2","text":"• Understand the trip, audience and booking requirement\n• Plan the page structure and user flow\n• Build the interface with HTML, CSS and JavaScript\n• Test layouts, links and form behaviour across screen sizes\n• Review feedback and improve the user experience","textPreview":"• Understand the trip, audience and booking requirement | • Plan the page structure and user flow | • Build the interface with HTML, CSS ...","textChars":258,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/efagca","slide":3,"text":"Workflow adapted from the user-provided Summer_internship_Report.pdf, pages 14-16. Applied here as a proposed development process for SafarNXT."}
+{"kind":"slide","id":"sl/d6jcmn","slide":4,"title":"Frontend Build Priorities","textShapes":2}
+{"kind":"textbox","id":"sh/nad8jax0","slide":4,"name":"Title 1","placeholder":"title","text":"Frontend Build Priorities","textPreview":"Frontend Build Priorities","textChars":25,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/m947a5wf","slide":4,"name":"Content Placeholder 2","text":"• Tour listing and package-detail pages\n• Mobile-friendly layouts with readable content\n• Enquiry and contact forms with basic validation\n• WhatsApp and referral links for quick outreach\n• Browser testing before each release","textPreview":"• Tour listing and package-detail pages | • Mobile-friendly layouts with readable content | • Enquiry and contact forms with basic valida...","textChars":224,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/d6jcmn","slide":4,"text":"Proposed frontend scope for SafarNXT. The focus on HTML, CSS, JavaScript, responsive layout, form interaction and browser testing is informed by the user-provided Summer_internship_Report.pdf, pages 17-21."}
+{"kind":"slide","id":"sl/6kq0c7","slide":5,"title":"Customer Website Journey","textShapes":2}
+{"kind":"textbox","id":"sh/5o7ihwv2","slide":5,"name":"Title 1","placeholder":"title","text":"Customer Website Journey","textPreview":"Customer Website Journey","textChars":24,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/kny18ruh","slide":5,"name":"Content Placeholder 2","text":"• Discover a suitable tour or travel package\n• Review destinations, itinerary and package information\n• Send an enquiry or booking request\n• Receive confirmation and next-step details\n• Share feedback after the trip","textPreview":"• Discover a suitable tour or travel package | • Review destinations, itinerary and package information | • Send an enquiry or booking re...","textChars":215,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/6kq0c7","slide":5,"text":"Proposed SafarNXT customer journey. This is a product design proposal, not a report of completed features."}
+{"kind":"slide","id":"sl/3xj93j","slide":6,"title":"Frontend Development Role","textShapes":2}
+{"kind":"textbox","id":"sh/4nmdwfup","slide":6,"name":"Title 1","placeholder":"title","text":"Frontend Development Role","textPreview":"Frontend Development Role","textChars":25,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/5ovepkva","slide":6,"name":"Content Placeholder 2","text":"• Build a clear, responsive website for SafarNXT visitors\n• Present tours, package details and enquiry options\n• Make navigation easy on desktop, tablet and mobile\n• Add simple interactive elements that help users plan a trip","textPreview":"• Build a clear, responsive website for SafarNXT visitors | • Present tours, package details and enquiry options | • Make navigation easy...","textChars":225,"textLines":4,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/3xj93j","slide":6,"text":"Role scope adapted for SafarNXT. Frontend principles and responsive-web practices are informed by the user-provided Summer_internship_Report.pdf, pages 9-21."}
+{"kind":"slide","id":"sl/ofy9wn61","slide":7,"title":"Target Customers","textShapes":2}
+{"kind":"textbox","id":"sh/cza94vmx","slide":7,"name":"Title 1","placeholder":"title","text":"Target Customers","textPreview":"Target Customers","textChars":16,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":7,"name":"Content Placeholder 2","text":"• Students\n• Children\n• Families\n• Senior Citizens\n• Working Professionals","textPreview":"• Students | • Children | • Families | • Senior Citizens | • Working Professionals","textChars":74,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":7,"text":""}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":8,"title":"Services","textShapes":2}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":8,"name":"Title 1","placeholder":"title","text":"Services","textPreview":"Services","textChars":8,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/0ba143al","slide":8,"name":"Content Placeholder 2","text":"• Educational Tours\n• Weekend Trips\n• Family Packages\n• Pilgrimage Tours\n• Adventure Trips","textPreview":"• Educational Tours | • Weekend Trips | • Family Packages | • Pilgrimage Tours | • Adventure Trips","textChars":90,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":8,"text":""}
+{"kind":"slide","id":"sl/i107q5of","slide":9,"title":"Business Model","textShapes":2}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":9,"name":"Title 1","placeholder":"title","text":"Business Model","textPreview":"Business Model","textChars":14,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":9,"name":"Content Placeholder 2","text":"Package fees\nPartner commissions\nPremium services\nTravel insurance add-ons","textPreview":"Package fees | Partner commissions | Premium services | Travel insurance add-ons","textChars":74,"textLines":4,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/i107q5of","slide":9,"text":""}
+{"kind":"slide","id":"sl/x8f69ofe","slide":10,"title":"Marketing","textShapes":2}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":10,"name":"Title 1","placeholder":"title","text":"Marketing","textPreview":"Marketing","textChars":9,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":10,"name":"Content Placeholder 2","text":"Instagram, WhatsApp, Colleges, Schools, Referral Program","textPreview":"Instagram, WhatsApp, Colleges, Schools, Referral Program","textChars":56,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":10,"text":""}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":11,"title":"Growth Plan","textShapes":2}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":11,"name":"Title 1","placeholder":"title","text":"Growth Plan","textPreview":"Growth Plan","textChars":11,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":11,"name":"Content Placeholder 2","text":"Website → First Group Tours → Reviews → Mobile App → Expansion","textPreview":"Website → First Group Tours → Reviews → Mobile App → Expansion","textChars":62,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":11,"text":""}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":12,"title":"Thank You","textShapes":2}
+{"kind":"textbox","id":"sh/18byd4zy","slide":12,"name":"Title 1","placeholder":"title","text":"Thank You","textPreview":"Thank You","textChars":9,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":12,"name":"Content Placeholder 2","text":"Let's Travel Together!","textPreview":"Let's Travel Together!","textChars":22,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":12,"text":""}

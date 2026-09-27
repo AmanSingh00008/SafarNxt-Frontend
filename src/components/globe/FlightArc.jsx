@@ -1,0 +1,2 @@
+import { QuadraticBezierLine } from '@react-three/drei'; import { Vector3 } from 'three'; import { latLngToVec3 } from './Globe';
+export function FlightArc({destination}){const start=latLngToVec3(51.50,-.12,2.03), end=latLngToVec3(destination.coords[1],destination.coords[0],2.03); const middle=start.clone().add(end).normalize().multiplyScalar(3.25);return <QuadraticBezierLine start={start} end={end} mid={middle} color="#C9A24B" lineWidth={1.5} dashed dashScale={4} dashSize={.28} gapSize={.25} transparent opacity={.9}/>}

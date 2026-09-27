@@ -1,0 +1,2 @@
+import { BackSide } from 'three';
+export function AtmosphereShader(){return <mesh scale={1.08}><sphereGeometry args={[2,64,64]}/><shaderMaterial side={BackSide} transparent depthWrite={false} vertexShader="varying vec3 vNormal; void main(){vNormal=normalize(normalMatrix*normal);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}" fragmentShader="varying vec3 vNormal; void main(){float glow=pow(.62-dot(vNormal,vec3(0.,0.,1.)),3.);gl_FragColor=vec4(.35,.60,.66,glow*.22);}"/></mesh>}
